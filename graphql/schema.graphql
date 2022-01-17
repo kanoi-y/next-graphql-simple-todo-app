@@ -2,6 +2,12 @@
 ### Do not make changes to this file directly
 
 
+type Mutation {
+  createTask(title: String!): Task!
+  deleteTask(id: Int!): Task!
+  updateTask(done: Boolean!, id: Int!, title: String!): Task!
+}
+
 type Query {
   tasks: [Task]!
 }

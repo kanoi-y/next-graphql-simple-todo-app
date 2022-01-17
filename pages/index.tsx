@@ -1,5 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import TaskList from '../components/TaskList'
+import TaskAddForm from '../components/TaskAddForm'
+import { Container, Heading, Stack } from '@chakra-ui/react'
 
 const Home: NextPage = () => {
   return (
@@ -11,7 +14,13 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-          <h1>Hello World</h1>
+        <Container my='32px'>
+          <Stack spacing='32px'>
+            <Heading>TASK LIST</Heading>
+            <TaskAddForm />
+            <TaskList />
+          </Stack>
+        </Container>
       </main>
     </div>
   )
