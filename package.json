@@ -1,6 +1,9 @@
 {
   "name": "next-graphql-simple-todo-app",
   "private": true,
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -8,15 +11,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "^3.8.1",
+    "apollo-server-micro": "^3.6.1",
+    "graphql": "^16.2.0",
+    "micro-cors": "^0.1.1",
     "next": "12.0.8",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@types/node": "17.0.8",
+    "@types/node": "^17.0.8",
     "@types/react": "17.0.38",
     "eslint": "8.7.0",
     "eslint-config-next": "12.0.8",
+    "prisma": "^3.8.1",
+    "ts-node": "^10.4.0",
     "typescript": "4.5.4"
   }
 }
